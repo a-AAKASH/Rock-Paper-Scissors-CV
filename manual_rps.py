@@ -26,6 +26,7 @@ def get_winner(computer_choice, user_choice):
     ## https://codereview.stackexchange.com/questions/43024/use-if-else-elif-conditionals-to-write-a-basic-rock-paper-scissors-game#comment74280_43024
     if computer_choice == user_choice:
         print("Draw!! \n Try Again!!")
+        play()
     elif (computer_choice == beats[user_choice]):
         print("Computer wins!!")
     elif (user_choice == beats[computer_choice]):

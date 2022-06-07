@@ -1,4 +1,4 @@
-from model.py import *
+import numpy as np
 
 def get_prediction(prediction):
     pred = np.argmax(prediction[0], axis=0)

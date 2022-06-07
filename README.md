@@ -17,3 +17,9 @@ Also, the model is run in the local machine using a snippet of code presented in
 
 The <manual_rps.py> file represents the code for the game which can be played without the camera. 
 the 'random' module is imported to aid the computer to select between the three options within a function. Also, another function to take the input from the user is formulated. Again, another function that decides whether the computer or the user has won the game is created. Here, an if-elif-else loop is used to come to the decision. 
+
+## Use the camera to play Rock-Paper-Scissors
+
+* The 'camera_rps.py' file is where a new function get_prediction() is created that return the output of the model created beforehand. It picks the class with the highest probability i.e. Rock, Paper or Scissors (or also Nothing). This predicts the item shown in the camera using your hands. 
+
+* 

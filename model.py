@@ -1,3 +1,4 @@
+import camera_rps
 import cv2
 from keras.models import load_model
 import numpy as np
@@ -11,10 +12,11 @@ while True:
     image_np = np.array(resized_frame)
     normalized_image = (image_np.astype(np.float32) / 127.0) - 1 # Normalize the image
     data[0] = normalized_image
-    prediction = model.predict(data)
+    prediction = model.predict(data) 
     cv2.imshow('frame', frame)
     # Press q to close the window
     print(prediction)
+    camera_rps.get_prediction(prediction) # Using the function defined in camera_rps to get the prediction for the sign shown in camera. 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
             
