@@ -13,7 +13,7 @@ def get_user_choice():
 
 
 
-def get_winner(computer_choice, user_choice):
+def get_winner(computer_choice, user_choice):    
     ## A dictionary that denotes the hierarchy of the options..eg. beats['Scissors'] will equal 'Rock',
     ## as Rock beats scissors
     beats = {
@@ -34,9 +34,8 @@ def get_winner(computer_choice, user_choice):
         print("Error!")
 
 def play():
-    get_computer_choice()
-    get_user_choice()
-    get_winner
+    computer_choice = get_computer_choice()
+    user_choice = get_user_choice()
+    get_winner(computer_choice, user_choice)
 
-
-
+play()
