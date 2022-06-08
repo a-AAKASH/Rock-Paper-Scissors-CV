@@ -1,10 +1,13 @@
 import camera_rps
+import time 
 import cv2
 from keras.models import load_model
 import numpy as np
 model = load_model('keras_model.h5')
 cap = cv2.VideoCapture(0)
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
+
+start_time = time.time()
 
 while True: 
     ret, frame = cap.read() 
@@ -19,7 +22,12 @@ while True:
     camera_rps.get_prediction(prediction) # Using the function defined in camera_rps to get the prediction for the sign shown in camera. 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
-            
+    end_time = time.time()
+    time_elapsed = end_time - start_time
+    print("Time elapsed: ",time_elapsed)
+
+
+#timing the script run
 # After the loop release the cap object
 cap.release()
 # Destroy all the windows
