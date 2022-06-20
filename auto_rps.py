@@ -9,7 +9,7 @@ def get_computer_choice():
     return random.choice(list)
 
 def get_user_choice():
-    choice = model.camera_rps.get_prediction(model.prediction)
+    choice = model.user_choice
     return choice
 
 
@@ -32,6 +32,8 @@ def get_winner(computer_choice, user_choice):
         print("Computer wins!!")
     elif (user_choice == beats[computer_choice]):
         print ("You win.")
+    elif (user_choice == "Nothing"):
+        print("Try Again.") 
     else:
         print("Error!")
 
